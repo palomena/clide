@@ -1,7 +1,7 @@
 #include "clide.h"
 
 static void signal_handler(int signum) {
-    if (stdscr != NULL) {  /* Checks if ncurses has been initialized */
+	if (stdscr != NULL) {  /* Checks if ncurses has been initialized */
 		endwin();  /* Exit curses mode gracefully */
 		exit(EXIT_FAILURE);
 	}

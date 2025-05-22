@@ -7,11 +7,11 @@
 #include "clide.h"
 
 int main(int argc, char *argv[]) {
-    parse_arguments(argc, argv);
-    initialize_clide();
-    open_document_editor();
-    while (handle_input(getch()));
-    close_document_editor();
-    quit_clide();
-    return EXIT_SUCCESS;
+	parse_arguments(argc, argv);
+	initialize_clide();
+	open_document_editor();
+	while (handle_input(getch()));
+	close_document_editor();
+	quit_clide();
+	return EXIT_SUCCESS;
 }

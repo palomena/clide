@@ -7,7 +7,7 @@ static const char program_help[] = {
 	"\tA value is expected if the option is marked with an asterisk (*).\n"
 	"\t-h       Print program help string\n"
 	"\t-v       Print program version string\n"
-    "\t-c   *   Use a color theme\n"
+	"\t-c   *   Use a color theme\n"
 	"\t-s   *   Stream file contents on demand\n"
 	"\t-t   *   Override the tabsize (default: 8)\n"
 	"Default keymap:\n"
@@ -26,9 +26,9 @@ static const char program_help[] = {
 	"\tCtrl+X :  Cut selection\n"
 	"\tCtrl+Y :  Redo last action\n"
 	"\tCtrl+Z :  Undo last action\n"
-    "Color themes:\n"
-    "\tdark  : black background, white foreground\n"
-    "\tlight : white background, black foreground\n"
+	"Color themes:\n"
+	"\tdark  : black background, white foreground\n"
+	"\tlight : white background, black foreground\n"
 };
 
 static void print_program_help(const char *program_name) {
@@ -45,10 +45,10 @@ static void print_program_version(void) {
 }
 
 struct Config config = {
-    .input = "New Document",
-    .stream_file_contents = false,
-    .tabsize = 8,
-    .theme = "dark"
+	.input = "New Document",
+	.stream_file_contents = false,
+	.tabsize = 8,
+	.theme = "dark"
 };
 
 void parse_arguments(int argc, char *argv[]) {
@@ -56,9 +56,9 @@ void parse_arguments(int argc, char *argv[]) {
 	for (;;) {
 		switch (getopt(argc, argv, options)) {
 			case -1:
-                for (int i = optind; i < argc; i++) {
-                    config.input = argv[i];
-                }
+				for (int i = optind; i < argc; i++) {
+					config.input = argv[i];
+				}
 				return;
 			default:
 				fprintf(stderr, "Invalid option: %c!\n", optopt);
@@ -69,9 +69,9 @@ void parse_arguments(int argc, char *argv[]) {
 			case 'v':
 				print_program_version();
 				exit(EXIT_SUCCESS);
-            case 'c':
-                config.theme = optarg;
-                break;
+			case 'c':
+				config.theme = optarg;
+				break;
 			case 's':
 				config.stream_file_contents = true;
 				break;

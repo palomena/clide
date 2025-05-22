@@ -7,6 +7,8 @@ Implementation language is ISO C99, requires a hosted implementation of libc
 and the ncurses libraries. The codebase is small and highly hackable.  
 That's it.
 
+![screenshot](data/screenshot.png)
+
 ## Features
 * modern key-bindings
 * builtin clipboard

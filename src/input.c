@@ -252,6 +252,8 @@ bool handle_input(int key) {
 			break;
 		case CTRL('s'):  /* save document */
 			save_document(editor.document);
+			editor.was_modified = false;
+			print_title_bar();
 			break;
 		case CTRL('f'):  /* find text */
 			launch_find_text_dialog();

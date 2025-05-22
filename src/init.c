@@ -7,6 +7,19 @@ static void signal_handler(int signum) {
 	}
 }
 
+static void apply_color_theme(void) {
+	if (!strcmp(config.theme, "dark")) {
+		init_pair(10, COLOR_WHITE, COLOR_BLACK);
+		attron(COLOR_PAIR(10));
+		bkgd(COLOR_PAIR(10));
+	} else if (!strcmp(config.theme, "bright")) {
+		init_pair(10, COLOR_BLACK, COLOR_WHITE);
+		attron(COLOR_PAIR(10));
+		bkgd(COLOR_PAIR(10));
+	}
+	/* Invalid color themes are ignored */
+}
+
 void initialize_clide(void) {
 	static mmask_t mouse_mask = (
 		BUTTON1_PRESSED
@@ -27,8 +40,7 @@ void initialize_clide(void) {
 	if (has_colors()) {
 		start_color();
 		init_color(COLOR_WHITE, 1000, 1000, 1000);
-		init_pair(10, COLOR_WHITE, COLOR_BLACK);
-		attron(COLOR_PAIR(10));
+		apply_color_theme();
 	}
 	update_terminal_dimensions();
 }

@@ -14,7 +14,7 @@ That's it.
 * builtin clipboard
 * colored output
 * custom theming
-* regex-based syntax highlighting
+* regex-based syntax highlighting (TODO)
 * mouse support
 * file streaming (TODO)
 

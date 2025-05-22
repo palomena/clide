@@ -36,12 +36,12 @@ static void print_program_help(const char *program_name) {
 }
 
 static const char program_version[] = {
-	"clide, version 0.0.1, %s\n"
+	"clide, version %s, %s\n"
 	"Copyright (c) 2017-2025, Niklas Benfer\n"
 };
 
 static void print_program_version(void) {
-	printf(program_version, curses_version());
+	printf(program_version, CLIDE_VERSION, curses_version());
 }
 
 struct Config config = {

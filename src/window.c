@@ -111,7 +111,7 @@ void print_title_bar(void) {
 	clrtoeol();
 	chgat(-1, A_REVERSE, 10, NULL);
 	attron(A_REVERSE | A_BOLD);
-	printw("\tclide 0.1\t");
+	printw("\tclide %s\t", CLIDE_VERSION);
 	attroff(A_BOLD);
 	printw("File %s%c", editor.document->path, editor.was_modified ? '*' : ' ');
 	attroff(A_REVERSE);

@@ -7,6 +7,8 @@
 #ifndef CLIDE_H
 #define CLIDE_H
 
+#define CLIDE_VERSION "0.1"
+
 /******************************************************************************
  * MARK: Dependencies
  * Requires ISO C90, hosted implementation of C standard library,

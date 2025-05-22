@@ -1,8 +1,8 @@
 # clide
 clide - short for *command line interface document editor* - is an intuitive
-and lightweight libncurses-based text editor for posix terminals.  
-It aims to be more user friendly by providing common shortcuts, key bindings
-and functionality expected by users from a modern text editor.  
+and lightweight libncurses-based text editor for posix terminals.
+It features sensible key bindings and the usual functionality that is expected
+by users from a text editor nowadays.
 Implementation language is ISO C99, requires a hosted implementation of libc
 and the ncurses libraries. The codebase is small and highly hackable.  
 That's it.

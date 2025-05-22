@@ -231,6 +231,9 @@ bool handle_input(int key) {
 			break;
 		case CTRL('q'):  /* quit */
 			return false;
+		case CTRL('a'):
+			select_everything();
+			break;
 		case CTRL('c'):  /* copy selection */
 			copy_current_selection();
 			break;

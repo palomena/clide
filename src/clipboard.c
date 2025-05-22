@@ -48,6 +48,15 @@ void cut_current_selection(void) {
     delete_current_selection();
 }
 
+void select_everything(void) {
+    selection.is_active = true;
+    selection.start_line = 0;
+    selection.end_line = normalize(editor.document->num_lines);
+    selection.start_column = 0;
+    selection.end_column = (*line_at(normalize(editor.document->num_lines)))->length;
+    print_page();
+}
+
 void paste_clipboard(void) {
     if (clipboard != NULL) {
         for (size_t i = 0; i < clipboard->length; i++) {

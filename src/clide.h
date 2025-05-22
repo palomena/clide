@@ -173,6 +173,11 @@ extern void copy_current_selection(void);
 extern void cut_current_selection(void);
 
 /**
+ *
+ */
+extern void select_everything(void);
+
+/**
  * Pastes the clipboard contents into the editor window.
  */
 extern void paste_clipboard(void);
